@@ -13,11 +13,8 @@ export default async function Banner() {
           <div className="carousel w-full">
             {banners.map((item: any) => {
               return (
-                <div className="carousel-item " style={{height: "270px"}}>
-                  <img
-                    src={item.image}
-                    alt="Burger"
-                  />
+                <div className="carousel-item " style={{ height: "270px" }}>
+                  <img src={item.image} alt="Burger" />
                 </div>
               );
             })}

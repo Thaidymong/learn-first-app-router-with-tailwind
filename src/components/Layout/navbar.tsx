@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export default function Navbar() {
@@ -41,19 +43,20 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </li>
-               
+
                 <li>
                   <a>Sale</a>
                 </li>
               </ul>
             </div>
-            {/* <Image
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1z8Bsr9K1Zo8v1i0TfUTtkBq9LIrSgTsaIl_uitMngA&s"
-              alt="Picture of the author"
-              width={60}
-              height={60}
-            /> */}
-            <div><img src="https://raw.githubusercontent.com/saadeghi/daisyui/master/src/docs/static/images/daisyui-logo/favicon-192.png" alt="" height="100px"/></div>
+            <div>
+              <Image
+                src="/download (2).png"
+                width={200}
+                height={100}
+                alt="Picture of the author"
+              />
+            </div>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
