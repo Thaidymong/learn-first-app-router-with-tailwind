@@ -10,6 +10,9 @@ export default function HomePage() {
     <>
       <SlideBannerScreen />
       <MainProducts />
+      <div className="banner py-[40px]">
+      <img src="Capturexcxcxcx.PNG" alt="" />
+      </div>
     </>
   );
 }

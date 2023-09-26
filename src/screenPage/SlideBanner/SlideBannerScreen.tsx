@@ -69,6 +69,28 @@ export default function SlideBannerScreen() {
               />
             </div>
           </SwiperSlide>
+          <SwiperSlide>
+            <div className="mx-auto w-full rounded overflow-hidden ">
+              <Image
+                src="/fb5ac1efbecc457328ac01f72d2e87b6.jpg_720x720q80.jpg_.webp"
+                width={720}
+                height={390}
+                className="pr-[10px]"
+                alt="Picture of the author"
+              />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="mx-auto w-full rounded overflow-hidden ">
+              <Image
+                src="/jaxya_512.webp"
+                width={720}
+                height={390}
+                className="pr-[10px]"
+                alt="Picture of the author"
+              />
+            </div>
+          </SwiperSlide>
         </Swiper>
       </div>
     </>

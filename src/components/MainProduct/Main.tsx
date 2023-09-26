@@ -1,5 +1,6 @@
+"use client";
 import axios from "axios";
-
+import { Card } from "flowbite-react";
 export default async function MainProducts() {
   const {
     data: {
@@ -34,6 +35,23 @@ export default async function MainProducts() {
                     </div>
                   </div>
                 </div>
+                {/* <div className="card card-side bg-base-100 shadow-xl m-4">
+                  <figure>
+                    <img
+                      src={image}
+                      alt="Movie"
+                    />
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title">{title}</h2>
+                    <h4>{summary}</h4>
+                    <p>{description}</p>
+                    <div className="card-actions justify-end">
+                      <button className="btn btn-primary">Watch</button>
+                    </div>
+                 
+                  </div>
+                </div> */}
               </>
             );
           })}

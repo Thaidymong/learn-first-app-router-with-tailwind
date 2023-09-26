@@ -155,7 +155,7 @@ export default function Navbar() {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg?w=2000" />
+                  <img src="photo_2023-09-07_11-07-03.jpg"/>
                 </div>
               </label>
               <ul
