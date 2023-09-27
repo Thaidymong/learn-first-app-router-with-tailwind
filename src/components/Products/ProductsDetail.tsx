@@ -3,14 +3,14 @@ import axios from "axios";
 export default async function ProductDetailComponent({ id }: { id: number }) {
   const {
     data: {
-      data: { product },
+      data: { menproducts },
     },
   } = await GetProductDetail(id);
-  const { image, description, summary } = product;
+  const { image, description, summary } = menproducts;
 
   return (
     <>
-      <div className="container mx-auto py-4" style={{ paddingTop: "30px" }}>
+      <div className="container mx-auto py-4 p-[30px]">
         <div className="card lg:card-side bg-base-100 shadow-xl">
           <figure>
             <img src={image} alt="Album" />
@@ -19,16 +19,16 @@ export default async function ProductDetailComponent({ id }: { id: number }) {
             <h2 className="card-title">{summary}</h2>
             <p>{description}</p>
             <div className="card-body">
-            <h2 className="card-title">
-              Shoes!
-              <div className="badge badge-secondary">NEW</div>
-            </h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions justify-end">
-              <div className="badge badge-outline">Fashion</div>
-              <div className="badge badge-outline">Products</div>
+              <h2 className="card-title">
+                Shoes!
+                <div className="badge badge-secondary">NEW</div>
+              </h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div className="card-actions justify-end">
+                <div className="badge badge-outline">Fashion</div>
+                <div className="badge badge-outline">Products</div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -42,14 +42,16 @@ export async function GetProductDetail(id: number) {
     {
       query: `
       query Product($productId: Int!) {
-        product(id: $productId) {
-          id
-          image
-          summary
-          title
-          description
-          created_at
-          category_id
+        query Menproducts(id: $productId) {
+          menproducts {
+            category_id
+            created_at
+            description
+            id
+            image
+            summary
+            title
+          }
         }
       }
       `,

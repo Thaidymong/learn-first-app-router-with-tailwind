@@ -3,41 +3,39 @@ import axios from "axios";
 export default async function Products() {
   const {
     data: {
-      data: { products },
+      data: { menproducts },
     },
   } = await GetAllProducts();
 
   return (
     <>
-      <div className="container mx-auto py-4" style={{ paddingTop: "30px" }}>
-        <h1
-          className="flex text-center justify-center text-5xl font-bold"
-          style={{ paddingBottom: "30px", paddingTop: "40px" }}
-        >
-          All Popular Products
+      <div className="container mx-auto py-4 pt-[40px]">
+        <h1 className="flex text-center justify-center text-3xl font-bold pb-[30px] pt-[40px]">
+          Men Products Collection
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products.map((item: any) => {
+          {menproducts.map((item: any) => {
             const { id, title, summary, description, image } = item;
             return (
-              <><a href={`/men-products/${id}/`}>
-                <div className="card w-96 bg-base-100 shadow-xl mx-3 ">
-                  <figure style={{ height: "300px" }}>
-                    <img src={image} alt="" />
-                  </figure>
-                  <div className="" style={{ padding: "10px" }}>
-                    <h2 className="card-title pt-3">
-                      {title}
-                      <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <h5 className="card-title py-3">{summary}</h5>
-                    <p>{description}</p>
-                    <div className="card-actions justify-end pt-3">
-                      <div className="badge badge-outline">Fashion</div>
-                      <div className="badge badge-outline">Products</div>
+              <>
+                <a href={`/men-products/${id}/`}>
+                  <div className="card w-[90] bg-base-100 shadow-xl m-3 pt-[30px]">
+                    <figure className="h-[300px]">
+                      <img src={image} alt="" />
+                    </figure>
+                    <div className="p-[10px]">
+                      <h2 className="card-title pt-3">
+                        {title}
+                        <div className="badge badge-secondary">NEW</div>
+                      </h2>
+                      <h5 className="card-title py-3">{summary}</h5>
+                      <p>{description}</p>
+                      <div className="card-actions justify-end py-[30px]">
+                        <div className="badge badge-outline">Fashion</div>
+                        <div className="badge badge-outline">Products</div>
+                      </div>
                     </div>
                   </div>
-                </div>
                 </a>
               </>
             );
@@ -53,17 +51,17 @@ export async function GetAllProducts() {
     "http://localhost:7000/dymong",
     {
       query: `
-        query products {
-          products {
-            id
-            title
-            summary
-            description
-            image
-            created_at
-            category_id
-          }
-        } 
+      query Menproducts {
+        menproducts {
+          category_id
+          created_at
+          description
+          id
+          image
+          summary
+          title
+        }
+      }
       `,
     },
     { headers: { "Content-Type": "application/json" } }

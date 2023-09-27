@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <>
       <div className="container mx-auto">
         <div className="navbar bg-base-100">
-          <div className="navbar-start">
+          <div className="navbar-start z-[9999]">
             <div className="dropdown">
               <label tabIndex={0} className="btn btn-ghost lg:hidden">
                 <svg
@@ -30,22 +31,32 @@ export default function Navbar() {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <a>New & Featured</a>
+                  <Link href="/">New & Featured</Link>
                 </li>
                 <li>
-                  <a>Men</a>
-                  <ul className="p-2 ">
-                    <li>
-                      <a>New Arrivals</a>
-                    </li>
-                    <li>
-                      <a>Best Sellers</a>
-                    </li>
-                  </ul>
+                  <Link href="/women-product">Women</Link>
                 </li>
-
                 <li>
-                  <a>Sale</a>
+                  <Link href="/men-products">Men</Link>
+                </li>
+                <li tabIndex={0} className="relative">
+                  <details>
+                    <summary>All Generation</summary>
+                    <ul className="p-2 w-[140px] absolute top-full left-0 bg-white shadow-lg z-10">
+                      <li>
+                        <Link href="/all-generation/boy">Boy</Link>
+                      </li>
+                      <li>
+                        <Link href="/all-generation/girl">Girl</Link>
+                      </li>
+                      <li>
+                        <Link href="/all-generation/kid">Kid</Link>
+                      </li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <Link href="/contact">Contact Us</Link>
                 </li>
               </ul>
             </div>
@@ -58,35 +69,36 @@ export default function Navbar() {
               />
             </div>
           </div>
+
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
               <li>
-                <a>New & Featured</a>
+                <Link href="/">New & Featured</Link>
+              </li>
+              <li>
+                <Link href="/women-product">Women</Link>
+              </li>
+              <li>
+                <Link href="/men-products">Men</Link>
               </li>
               <li tabIndex={0} className="relative">
                 <details>
-                  <summary>Men</summary>
+                  <summary>All Generation</summary>
                   <ul className="p-2 w-[140px] absolute top-full left-0 bg-white shadow-lg z-10">
                     <li>
-                      <a>New Arrivals</a>
+                      <Link href="/all-generation/boy">Boy</Link>
                     </li>
                     <li>
-                      <a>Best Sellers</a>
+                      <Link href="/all-generation/girl">Girl</Link>
+                    </li>
+                    <li>
+                      <Link href="/all-generation/kid">Kid</Link>
                     </li>
                   </ul>
                 </details>
               </li>
               <li>
-                <a>Woman</a>
-              </li>
-              <li>
-                <a>Kids</a>
-              </li>
-              <li>
-                <a>Accessories</a>
-              </li>
-              <li>
-                <a>Sale</a>
+                <Link href="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -139,7 +151,7 @@ export default function Navbar() {
               </label>
               <div
                 tabIndex={0}
-                className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+                className="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow z-[999]"
               >
                 <div className="card-body">
                   <span className="font-bold text-lg">8 Items</span>
@@ -155,12 +167,12 @@ export default function Navbar() {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src="photo_2023-09-07_11-07-03.jpg"/>
+                  <img src="photo_2023-09-07_11-07-03.jpg" />
                 </div>
               </label>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
+                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 z-[9999]"
               >
                 <li>
                   <a className="justify-between">

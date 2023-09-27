@@ -17,7 +17,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/S06b445e35c8c4826806b36cc2a7b09c4M.jpg"
+                src="/z.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -28,7 +28,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/fb5ac1efbecc457328ac01f72d2e87b6.jpg_720x720q80.jpg_.webp"
+                src="/aa.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -39,7 +39,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/jaxya_512.webp"
+                src="/c.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -50,7 +50,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/fb5ac1efbecc457328ac01f72d2e87b6.jpg_720x720q80.jpg_.webp"
+                src="/zzzzz.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -61,7 +61,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden">
               <Image
-                src="/images.jpg"
+                src="/zz.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -72,7 +72,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/fb5ac1efbecc457328ac01f72d2e87b6.jpg_720x720q80.jpg_.webp"
+                src="/zzz.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
@@ -83,7 +83,7 @@ export default function SlideBannerScreen() {
           <SwiperSlide>
             <div className="mx-auto w-full rounded overflow-hidden ">
               <Image
-                src="/jaxya_512.webp"
+                src="/zzzzz.jpg"
                 width={720}
                 height={390}
                 className="pr-[10px]"
