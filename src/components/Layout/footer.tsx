@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-base-200">
-        <div className="md:container md:mx-auto pt-4 footer p-10 text-base-content">
+        <div className="md:container md:mx-auto pt-4 footer p-10 text-base-content pt-[40px]">
           <nav>
             <header className="footer-title">Services</header>
             <a className="link link-hover">Branding</a>

@@ -99,12 +99,9 @@ export default function Navbar() {
                   </ul>
                 </details>
               </li>
-              {/* <li>
-                <Link href="/contact">Contact Us</Link>
-              </li> */}
               <li>
                 <button type="button" onClick={() => router.push("/contact")}>
-                  Dashboard
+                  Contact Us
                 </button>
               </li>
             </ul>
