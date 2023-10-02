@@ -28,7 +28,7 @@ export default async function Products() {
                         {title}
                         <div className="badge badge-secondary">NEW</div>
                       </h2>
-                      <h5 className="card-title py-3">{summary}</h5>
+                      {/* <h5 className="card-title py-3">{summary}</h5> */}
                       <p>{description}</p>
                       <div className="card-actions justify-end py-[30px]">
                         <div className="badge badge-outline">Fashion</div>

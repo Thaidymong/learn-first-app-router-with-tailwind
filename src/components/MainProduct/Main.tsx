@@ -15,26 +15,29 @@ export default async function MainProducts() {
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products.map((item: any) => {
-            const { title, summary, description, image } = item;
+            const { id, title, summary, description, image } = item;
             return (
               <>
-                <div className="card w-[90] bg-base-100 shadow-xl m-3 pt-[30px]">
-                  <figure className="h-[300px]">
-                    <img src={image} alt="" />
-                  </figure>
-                  <div className="p-[10px]">
-                    <h2 className="card-title pt-3">
-                      {title}
-                      <div className="badge badge-secondary">NEW</div>
-                    </h2>
-                    <h5 className="card-title py-3">{summary}</h5>
-                    <p>{description}</p>
-                    <div className="card-actions justify-end py-[30px]">
-                      <div className="badge badge-outline">Fashion</div>
-                      <div className="badge badge-outline">Products</div>
+                {" "}
+                <a href={`/${id}/`}>
+                  <div className="card w-[90] bg-base-100 shadow-xl m-3 pt-[30px]">
+                    <figure className="h-[300px]">
+                      <img src={image} alt="" />
+                    </figure>
+                    <div className="p-[10px]">
+                      <h2 className="card-title pt-3">
+                        {title}
+                        <div className="badge badge-secondary">NEW</div>
+                      </h2>
+                      <h5 className="card-title py-3">{summary}</h5>
+                      <p>{description}</p>
+                      <div className="card-actions justify-end py-[30px]">
+                        <div className="badge badge-outline">Fashion</div>
+                        <div className="badge badge-outline">Products</div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </a>
               </>
             );
           })}

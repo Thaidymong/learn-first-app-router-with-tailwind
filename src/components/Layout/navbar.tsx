@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <>
       <div className="container mx-auto">
@@ -97,8 +99,13 @@ export default function Navbar() {
                   </ul>
                 </details>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/contact">Contact Us</Link>
+              </li> */}
+              <li>
+                <button type="button" onClick={() => router.push("/contact")}>
+                  Dashboard
+                </button>
               </li>
             </ul>
           </div>

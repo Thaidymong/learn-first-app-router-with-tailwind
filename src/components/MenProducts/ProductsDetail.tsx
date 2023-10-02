@@ -3,10 +3,10 @@ import axios from "axios";
 export default async function ProductDetailComponent({ id }: { id: number }) {
   const {
     data: {
-      data: { menproducts },
+      data: { menproduct },
     },
   } = await GetProductDetail(id);
-  const { image, description, summary } = menproducts;
+  const { image, description, summary } = menproduct;
 
   return (
     <>
@@ -41,22 +41,20 @@ export async function GetProductDetail(id: number) {
     "http://localhost:7000/dymong",
     {
       query: `
-      query Product($productId: Int!) {
-        query Menproducts(id: $productId) {
-          menproducts {
-            category_id
-            created_at
-            description
-            id
-            image
-            summary
-            title
-          }
+      query Menproduct($menproductId: Int!) {
+        menproduct(id: $menproductId) {
+          id
+          image
+          summary
+          title
+          description
+          created_at
+          category_id
         }
       }
       `,
       variables: {
-        productId: Number(id),
+        menproductId: Number(id),
       },
     },
     { headers: { "Content-Type": "application/json" } }
